@@ -234,7 +234,10 @@ class Bomb(pygame.sprite.Sprite):
         self.mask = pygame.mask.from_surface(self.image)
         self.rect.x = x3
         self.rect.y = y3
-        death.play()
+        try:
+            death.play()
+        except Exception:
+            pass
 
 
 class Mainscreen(pygame.sprite.Sprite):
@@ -400,7 +403,10 @@ if __name__ == '__main__':
     screen = pygame.display.set_mode(size)
 
     v = 20
-    death = pygame.mixer.Sound('data/death.mp3')
+    try:
+        death = pygame.mixer.Sound('data/death.mp3')
+    except Exception:
+        pass
     all_sprites = pygame.sprite.Group()
     clock = pygame.time.Clock()
     running = True
@@ -411,8 +417,7 @@ if __name__ == '__main__':
     Restart(all_sprites)
     dragon = AnimatedSprite(load_image("dog3.png", 'data', colorkey=-1), 5, 1, 0, 630)
     all_sprites.draw(screen)
-    if False:
-        pygame.mouse.set_visible(False)
+    pygame.mouse.set_visible(False)
     shoot = False
     jump = True
     lasttest = True
