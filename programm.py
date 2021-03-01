@@ -73,7 +73,7 @@ def start():
         coll = random.randrange(3, 10)
         starty = random.randrange(350)
         Bomb(width - 150, starty, spx, spy, coll, all_sprites)
-        Bomb(0, 1, 5, 5, 6, all_sprites)
+        Bomb(0, starty, spx, spy, coll, all_sprites)
     elif now1 == 10:
         finall.final()
 
