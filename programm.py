@@ -461,6 +461,7 @@ if __name__ == '__main__':
                     finall = Fin(all_sprites)
                     dog = Dogg(all_sprites)
                     a1 = pygame.time.Clock()
+                    a50 = 0
         a1.tick(v)
         if dragon.rect.x != 400:
             dragon.rect.x += 5
