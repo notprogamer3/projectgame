@@ -449,6 +449,7 @@ if __name__ == '__main__':
                     bombs = pygame.sprite.Group()
                     bullet = pygame.sprite.Group()
                     Mainscreen(all_sprites)
+                    Restart(all_sprites)
                     dragon = AnimatedSprite(load_image("dog3.png", 'data', colorkey=-1), 5, 1, 0, 630)
                     all_sprites.draw(screen)
                     shoot = False
