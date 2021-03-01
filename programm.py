@@ -398,7 +398,7 @@ class Dogg(pygame.sprite.Sprite):
 
 if __name__ == '__main__':
     pygame.init()
-    pygame.display.set_caption('круг')
+    pygame.display.set_caption('duck hunt')
     size = width, height = 956, 894
     screen = pygame.display.set_mode(size)
 
